@@ -14,20 +14,17 @@
 # limitations under the License.
 #
 
-# Get the prebuilt list of APNs
-$(call inherit-product, vendor/omni/config/gsm.mk)
-
-# Inherit from the common Open Source product configuration
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+# Embedded
+$(call inherit-product, build/target/product/embedded.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/pb/config/common.mk)
 
 PRODUCT_COPY_FILES += \
-    device/doogee/x5/recovery.fstab:recovery/root/etc/recovery.fstab
+    device/doogee/gelicia/recovery.fstab:recovery/root/etc/recovery.fstab
 
 PRODUCT_DEVICE := gelicia
 PRODUCT_NAME := omni_gelicia
 PRODUCT_BRAND := DOOGEE
-PRODUCT_MODEL := hct6580_weg_c_m
+PRODUCT_MODEL := x5
 PRODUCT_MANUFACTURER := DOOGEE

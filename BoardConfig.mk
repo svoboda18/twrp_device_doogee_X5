@@ -76,12 +76,13 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun%d/file
 TW_BRIGHTNESS_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
+PB_TORCH_PATH := "/sys/class/flashlight"
 
 # Misc
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
-TW_INCLUDE_FB2PNG := true
 TW_DEFAULT_LANGUAGE := en
 TW_EXCLUDE_SUPERSU := true
 TW_INCLUDE_CRYPTO := true
 TARGET_USES_EXFAT := true
 TARGET_USES_NTFS := true
+TW_USE_TOOLBOX := true

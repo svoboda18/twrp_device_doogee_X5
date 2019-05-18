@@ -1,1 +1,1 @@
-add_lunch_combo omni_x5-eng
+add_lunch_combo omni_gelicia-eng
