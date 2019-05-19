@@ -18,7 +18,6 @@
 $(call inherit-product, build/target/product/embedded.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/pb/config/common.mk)
 
 PRODUCT_COPY_FILES += \
     device/doogee/gelicia/recovery.fstab:recovery/root/etc/recovery.fstab
