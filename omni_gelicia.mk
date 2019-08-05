@@ -18,6 +18,7 @@
 $(call inherit-product, build/target/product/embedded.mk)
 
 # Inherit from our custom product configuration
+$(call inherit-product, vendor/omni/config/common.mk)
 
 PRODUCT_COPY_FILES += \
     device/doogee/gelicia/recovery.fstab:recovery/root/etc/recovery.fstab
@@ -25,5 +26,5 @@ PRODUCT_COPY_FILES += \
 PRODUCT_DEVICE := gelicia
 PRODUCT_NAME := omni_gelicia
 PRODUCT_BRAND := DOOGEE
-PRODUCT_MODEL := x5
+PRODUCT_MODEL := X5
 PRODUCT_MANUFACTURER := DOOGEE
