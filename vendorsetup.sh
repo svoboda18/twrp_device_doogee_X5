@@ -1,1 +1,1 @@
-add_lunch_combo omni_gelicia-user
+add_lunch_combo omni_gelicia-userdebug
