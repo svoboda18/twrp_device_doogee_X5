@@ -23,7 +23,7 @@
 /system		ext4	/dev/block/platform/bootdevice/by-name/system        flags=display="System";flashimg=1
 /system_image   emmc	/dev/block/platform/bootdevice/by-name/system        flags=display="System Image";backup=1;flashimg=1 
 /cache		ext4	/dev/block/platform/bootdevice/by-name/cache         flags=display="Cache"
-/data		ext4	/dev/block/platform/bootdevice/by-name/userdata      flags=display="Data";encryptable=footer;fileencryption=adiantum:adiantum
+/data		ext4	/dev/block/platform/bootdevice/by-name/userdata      flags=display="Data";fileencryption=adiantum:adiantum
 /vendor         ext4    /dev/block/platform/bootdevice/by-name/vendor        flags=display="Vendor";backup=1;wipeingui
 /vendor_image   emmc    /dev/block/platform/bootdevice/by-name/vendor        flags=display="Vendor Image";backup=1;flashimg=1
 /external_sd    vfat	/dev/block/mmcblk1p1	/dev/block/mmcblk1	     flags=display="External SDcard";storage;removable;backup=0

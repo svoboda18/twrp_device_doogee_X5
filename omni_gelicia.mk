@@ -25,11 +25,6 @@ PRODUCT_PACKAGES += \
 	charger_res_images \
 	charger
 
-# Encryption
-PRODUCT_PACKAGES += \
-    libcryptfs_hw \
-    libcryptfsfde
-
 PRODUCT_COPY_FILES += \
     device/doogee/gelicia/recovery.fstab:recovery/root/etc/recovery.fstab
 
