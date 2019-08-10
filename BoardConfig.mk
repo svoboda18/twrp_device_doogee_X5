@@ -70,16 +70,22 @@ TW_DEFAULT_BRIGHTNESS := 80
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun%d/file
 TW_BRIGHTNESS_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
+ALLOW_MISSING_DEPENDENCIES := true
 
 # Encryptions
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_FBE := true
+
+# Treble
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+TARGET_COPY_OUT_VENDOR := vendor
 
 # System as root
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_ROOT_EXTRA_FOLDERS := persist protect1 protect2 nvdata odm oem
 BOARD_SUPPRESS_SECURE_ERASE := true
 BOARD_AVB_ENABLE := true
+AB_OTA_UPDATER := false
 
 # Misc
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
