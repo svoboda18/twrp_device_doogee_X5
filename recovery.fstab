@@ -15,6 +15,7 @@
 /frp		emmc	/dev/block/platform/bootdevice/by-name/frp	     flags=display="FRP";backup=1
 /nvdata		ext4	/dev/block/platform/bootdevice/by-name/nvdata	     flags=display="IMEI";backup=1
 /vbmeta		emmc	/dev/block/platform/bootdevice/by-name/vbmeta        flags=display="VBMeta";backup=1
+/metadata	emmc	/dev/block/platform/bootdevice/by-name/metadata      flags=display="Metadata";backup=1
 /oemkeystore    emmc	/dev/block/platform/bootdevice/by-name/oemkeystore   flags=display="OEM Keystore";backup=1
 /odmdtbo	emmc	/dev/block/platform/bootdevice/by-name/odmdtbo	     flags=display="ODMDTBO";wipeingui;backup=1
 /mobile_info emmc	/dev/block/platform/bootdevice/by-name/mobile_info   flags=display="Mobile Info";backup=1
@@ -23,7 +24,7 @@
 /system		ext4	/dev/block/platform/bootdevice/by-name/system        flags=display="System";flashimg=1
 /system_image   emmc	/dev/block/platform/bootdevice/by-name/system        flags=display="System Image";backup=1;flashimg=1 
 /cache		ext4	/dev/block/platform/bootdevice/by-name/cache         flags=display="Cache"
-/data		ext4	/dev/block/platform/bootdevice/by-name/userdata      flags=display="Data";fileencryption=adiantum:adiantum
+/data		ext4	/dev/block/platform/bootdevice/by-name/userdata      flags=display="Data";encryptable=/dev/block/platform/bootdevice/by-name/metadata
 /vendor         ext4    /dev/block/platform/bootdevice/by-name/vendor        flags=display="Vendor";backup=1;wipeingui
 /vendor_image   emmc    /dev/block/platform/bootdevice/by-name/vendor        flags=display="Vendor Image";backup=1;flashimg=1
 /external_sd    vfat	/dev/block/mmcblk1p1	/dev/block/mmcblk1	     flags=display="External SDcard";storage;removable;backup=0

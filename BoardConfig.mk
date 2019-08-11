@@ -31,7 +31,7 @@ TARGET_CPU_SMP := true
 TARGET_CPU_VARIANT := generic
 
 # Kernel properties
-BOARD_KERNEL_CMDLINE := bootopt=64S3,32S1,32S1 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := bootopt=64S3,32S1,32S1 buildvariant=user
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_BASE = 0x80000000
 BOARD_RAMDISK_OFFSET = 0x04000000
@@ -73,8 +73,11 @@ TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 ALLOW_MISSING_DEPENDENCIES := true
 
 # Encryptions
+TW_CRYPTO_FS_TYPE := "ext4"
+TW_CRYPTO_REAL_BLKDEV := "/dev/block/platform/bootdevice/by-name/userdata" 
+TW_CRYPTO_MNT_POINT := "/data"
+TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,discard,noauto_da_alloc,data =ordered"
 TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_FBE := true
 
 # Treble
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -86,6 +89,10 @@ BOARD_ROOT_EXTRA_FOLDERS := persist protect1 protect2 nvdata odm oem
 BOARD_SUPPRESS_SECURE_ERASE := true
 BOARD_AVB_ENABLE := true
 AB_OTA_UPDATER := false
+
+# MTP
+TW_MTP_DEVICE := /dev/mtp_usb
+TW_HAS_MTP := true
 
 # Misc
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
