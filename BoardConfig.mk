@@ -28,16 +28,18 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
-TARGET_CPU_VARIANT := generic
+TARGET_CPU_VARIANT := cortex-a7
+ARCH_ARM_HAVE_TLS_REGISTER := true
 
 # Kernel properties
-BOARD_KERNEL_CMDLINE := bootopt=64S3,32S1,32S1 buildvariant=user
-BOARD_KERNEL_PAGESIZE := 2048
+BOARD_KERNEL_CMDLINE := bootopt=64S3,32S1,32S1 buildvariant=userdebug
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_BASE = 0x80000000
 BOARD_RAMDISK_OFFSET = 0x04000000
 BOARD_KERNEL_OFFSET = 0x00008000
-BOARD_TAGS_OFFSET = 0x0e000000
+BOARD_TAGS_OFFSET = 0xE000000
 BOARD_MKBOOTIMG_ARGS := --kernel_offset $(BOARD_KERNEL_OFFSET) --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_TAGS_OFFSET)
+BOARD_MKBOOTIMG_ARGS += --header_version 1
 
 TARGET_PREBUILT_KERNEL := device/doogee/gelicia/prebuilt/kernel
 
@@ -53,30 +55,19 @@ TARGET_USERIMAGES_USE_EXT4 := true
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
-BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
-BOARD_SUPPRESS_EMMC_WIPE := true
 BOARD_HAS_NO_MISC_PARTITION := true
-BOARD_USES_MMCUTILS := true
 BOARD_CHARGER_SHOW_PERCENTAGE := true
 
 # TWRP
-HAVE_SELINUX := true
 RECOVERY_SDCARD_ON_DATA := true
-TW_EXTERNAL_STORAGE_PATH := "/external_sd"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 TW_THEME := portrait_hdpi
 TW_MAX_BRIGHTNESS := 255
 TW_DEFAULT_BRIGHTNESS := 80
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun%d/file
-TW_BRIGHTNESS_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness
-TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
-ALLOW_MISSING_DEPENDENCIES := true
+TW_CUSTOM_CPU_TEMP_PATH := "/sys/devices/virtual/thermal/thermal_zone1/temp"
+TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
+ALLOW_MISSING_DEPENDENCIES=true
 
 # Encryptions
-TW_CRYPTO_FS_TYPE := "ext4"
-TW_CRYPTO_REAL_BLKDEV := "/dev/block/platform/bootdevice/by-name/userdata" 
-TW_CRYPTO_MNT_POINT := "/data"
-TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,discard,noauto_da_alloc,data =ordered"
 TW_INCLUDE_CRYPTO := true
 
 # Treble
@@ -85,20 +76,13 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # System as root
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
-BOARD_ROOT_EXTRA_FOLDERS := persist protect1 protect2 nvdata odm oem
-BOARD_SUPPRESS_SECURE_ERASE := true
-BOARD_AVB_ENABLE := true
-AB_OTA_UPDATER := false
-
-# MTP
-TW_MTP_DEVICE := /dev/mtp_usb
-TW_HAS_MTP := true
 
 # Misc
-TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 TW_DEFAULT_LANGUAGE := en
 TW_EXCLUDE_SUPERSU := true
 TW_USE_TOOLBOX := true
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
 
 # Filesystem support
 TARGET_USES_EXFAT := true

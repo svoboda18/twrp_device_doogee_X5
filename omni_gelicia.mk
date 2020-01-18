@@ -20,11 +20,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
 
-# Charger
-PRODUCT_PACKAGES += \
-	charger_res_images \
-	charger
-
 PRODUCT_COPY_FILES += \
     device/doogee/gelicia/recovery.fstab:recovery/root/etc/recovery.fstab
 
@@ -38,5 +33,4 @@ PRODUCT_MANUFACTURER := DOOGEE
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.secure=0 \
     ro.debugable=1 \
-    ro.adb.secure=0 \
-    ro.allow.mock.location=0
+    ro.adb.secure=0
