@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 The Android Open Source Project
+# Copyright (C) 2020 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -72,20 +72,10 @@ ALLOW_MISSING_DEPENDENCIES=true
 # Encryptions
 TW_INCLUDE_CRYPTO := true
 
-# Treble
-BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
-TARGET_COPY_OUT_VENDOR := vendor
-
-# MTP
-TW_MTP_DEVICE := /dev/mtp_usb
-TW_HAS_MTP := true
-
 # Misc
 TW_DEFAULT_LANGUAGE := en
 TW_EXCLUDE_SUPERSU := true
 TW_USE_TOOLBOX := true
-TWRP_INCLUDE_LOGCAT := true
-TARGET_USES_LOGD := true
 
 # Filesystem support
 TARGET_USES_EXFAT := true
