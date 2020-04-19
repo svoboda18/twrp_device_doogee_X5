@@ -33,9 +33,3 @@ PRODUCT_NAME := omni_gelicia
 PRODUCT_BRAND := DOOGEE
 PRODUCT_MODEL := X5
 PRODUCT_MANUFACTURER := DOOGEE
-
-# enable stock zip packages flash
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.secure=0 \
-    ro.debugable=1 \
-    ro.adb.secure=0

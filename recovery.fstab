@@ -22,8 +22,8 @@
 /data		f2fs	/dev/block/platform/bootdevice/by-name/userdata      flags=display="Data";encryptable=/dev/block/platform/bootdevice/by-name/metadata
 /vendor         ext4    /dev/block/platform/bootdevice/by-name/vendor        flags=display="Vendor";backup=1;wipeingui
 /vendor/nvdata  ext4	/dev/block/platform/bootdevice/by-name/nvdata	     flags=display="IMEI";backup=1
-/vendor/protect_f	ext4	/dev/block/platform/bootdevice/by-name/protect	     flags=display="Protect";backup=1
-/vendor/protect_s	ext4	/dev/block/platform/bootdevice/by-name/protect2	     flags=display="Protect2";backup=1
+/vendor/protect_f	ext4	/dev/block/platform/bootdevice/by-name/protect1	     flags=display="PROTECT";backup=1
+/vendor/protect_s	ext4	/dev/block/platform/bootdevice/by-name/protect2	     flags=display="PROTECT2";backup=1
 /vendor_image   emmc    /dev/block/platform/bootdevice/by-name/vendor        flags=display="Vendor Image";backup=1;flashimg=1
 /external_sd    vfat	/dev/block/mmcblk1p1	/dev/block/mmcblk1	     flags=display="External SDcard";storage;removable;backup=0
 /usbotg		vfat	/dev/block/sda1	        /dev/block/sda	             flags=display="USB OTG";storage;removable;backup=0

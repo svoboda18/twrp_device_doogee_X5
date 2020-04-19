@@ -33,10 +33,8 @@ ARCH_ARM_HAVE_NEON := true
 ARCH_ARM_HAVE_ARMV7A := true
 
 # Kernel properties
-BOARD_KERNEL_CMDLINE := bootopt=64S3,32S1,32S1 buildvariant=userdebug
+BOARD_KERNEL_CMDLINE := bootopt=64S3,32S1,32S1
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
-BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=musb-hdrc
-BOARD_KERNEL_CMDLINE += androidboot.configfs=true
 BOARD_KERNEL_BASE = 0x80000000
 BOARD_RAMDISK_OFFSET = 0x04000000
 BOARD_KERNEL_OFFSET = 0x00008000
@@ -71,6 +69,10 @@ ALLOW_MISSING_DEPENDENCIES=true
 
 # Encryptions
 TW_INCLUDE_CRYPTO := true
+
+# MTP
+TW_MTP_DEVICE := /dev/mtp_usb
+TW_HAS_MTP := true
 
 # Misc
 TW_DEFAULT_LANGUAGE := en
