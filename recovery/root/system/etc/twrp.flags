@@ -6,7 +6,6 @@
 /vbmeta_vendor   emmc      /dev/block/platform/bootdevice/by-name/vbmeta_vendor   flags=backup;flashimg
 /vbmeta_system   emmc      /dev/block/platform/bootdevice/by-name/vbmeta_system   flags=backup;flashimg
 /cache           ext4      /dev/block/platform/bootdevice/by-name/cache
-/metadata        emmc      /dev/block/platform/bootdevice/by-name/metadata
 /persistent      emmc      /dev/block/platform/bootdevice/by-name/frp         flags=backup
 /bootloader      emmc      /dev/block/platform/bootdevice/by-name/lk          flags=display="LK";backup;flashimg
 /bootloader2     emmc      /dev/block/platform/bootdevice/by-name/lk2         flags=backup
@@ -17,6 +16,8 @@
 /system_image	 emmc      /dev/block/dm-0					flags=backup=1;wipeingui;flashimg=1;display="System Image";
 /vendor_image	 emmc      /dev/block/dm-2					flags=backup=1;wipeingui;flashimg=1;display="Vendor Image";
 /product_image	 emmc      /dev/block/dm-1					flags=backup=1;wipeingui;flashimg=1;display="Product Image";
+
+/metadata        ext4      /dev/block/platform/bootdevice/by-name/md_udc	flags=backup=1;display="Metadata";
 
 # IMEI and modem related
 # below four partitions are ext4, but we are using only for backup so emmc

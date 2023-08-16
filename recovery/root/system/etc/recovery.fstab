@@ -4,4 +4,3 @@ vendor                                            /vendor       ext4    ro      
 product                                           /product      ext4    ro                                                                            wait,avb,logical,first_stage_mount,
 
 /dev/block/platform/bootdevice/by-name/userdata   /data         f2fs    wait,check,formattable,quota,reservedsize=128m,checkpoint=fs,fileencryption=adiantum:adiantum
-/dev/block/platform/bootdevice/by-name/md_udc     /metadata     ext4    defaults,first_stage_mount
