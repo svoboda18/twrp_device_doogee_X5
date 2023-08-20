@@ -1,2 +1,11 @@
 ro.adb.secure=0
+ro.secure=0
+ro.debuggable=1
+ro.sys.usb.mtp.whql.enable=0
+ro.sys.usb.storage.type=mtp
+ro.mediatek.platform=MT6580
+ro.hardware=MT6580
+ro.boot.dynamic_partitions=true
 ro.vendor.mediatek.platform=MT6580
+ro.crypto.fde_algorithm=adiantum
+ro.crypto.volume.filenames_mode=aes-256-cts
