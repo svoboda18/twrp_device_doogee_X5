@@ -1,7 +1,3 @@
-on init
-    mkdir /mnt/vendor/metadata 0700 root root
-    mount ext4 /dev/block/platform/bootdevice/by-name/md_udc /mnt/vendor/metadata
-
 on fs
     install_keyring
     setprop crypto.ready 1
