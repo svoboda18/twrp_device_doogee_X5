@@ -21,6 +21,10 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 # Dynamic Partition
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# fastbootd
+PRODUCT_PACKAGES += \
+    android.hardware.fastboot@1.0-impl-mock
+
 # Health HAL
 PRODUCT_PACKAGES += \
     android.hardware.health@2.0-service \
