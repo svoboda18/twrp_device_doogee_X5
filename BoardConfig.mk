@@ -78,7 +78,6 @@ BOARD_MAIN_PARTITION_LIST := system vendor product
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6580
-BOARD_HAS_NO_MISC_PARTITION := true
 
 # File systems
 BOARD_SYSTEMIMAGE_PARTITION_TYPE := ext4
