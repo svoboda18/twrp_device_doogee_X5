@@ -1,3 +1,6 @@
+on early-init
+    start adbd
+
 on fs
     install_keyring
     setprop crypto.ready 1
