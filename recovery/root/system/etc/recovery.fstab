@@ -3,4 +3,5 @@ system                                            /system       ext4    ro      
 vendor                                            /vendor       ext4    ro                                                                            wait,avb,logical,first_stage_mount,
 product                                           /product      ext4    ro                                                                            wait,avb,logical,first_stage_mount,
 
-/dev/block/platform/bootdevice/by-name/userdata   /data         f2fs    noatime,nosuid,nodev,discard,noflush_merge,reserve_root=134217,resgid=1065 wait,check,formattable,quota,resize,reservedsize=128m,fileencryption=adiantum:adiantum
+/dev/block/platform/bootdevice/by-name/userdata   /data         f2fs    noatime,nosuid,nodev,discard,noflush_merge,reserve_root=134217,resgid=1065    wait,check,formattable,quota,resize,reservedsize=128m,fileencryption=adiantum:adiantum:v1
+/dev/block/platform/bootdevice/by-name/md_udc     /metadata     ext4    noatime,nosuid,nodev,discard wait,formattable,first_stage_mount

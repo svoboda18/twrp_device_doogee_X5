@@ -3,7 +3,6 @@ on early-init
 
 on fs
     install_keyring
-    setprop crypto.ready 1
 
 on boot
     start health-hal-2-0
@@ -21,7 +20,7 @@ service keystore /system/bin/keystore /tmp/misc/keystore
     disabled
     seclabel u:r:recovery:s0
 
-service gatekeeper-1-0 /system/bin/android.hardware.gatekeeper@1.0-service
+service gatekeeper-1-0 /system/bin/android.hardware.gatekeeper@1.0-service.software
     user root
     group root
     disabled
