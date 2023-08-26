@@ -5,7 +5,6 @@
 /vbmeta          emmc      /dev/block/platform/bootdevice/by-name/vbmeta      flags=backup;flashimg
 /vbmeta_vendor   emmc      /dev/block/platform/bootdevice/by-name/vbmeta_vendor   flags=backup;flashimg
 /vbmeta_system   emmc      /dev/block/platform/bootdevice/by-name/vbmeta_system   flags=backup;flashimg
-/cache           ext4      /dev/block/platform/bootdevice/by-name/cache
 /metadata        ext4      /dev/block/platform/bootdevice/by-name/md_udc      flags=display="Metadata";backup
 /persistent      emmc      /dev/block/platform/bootdevice/by-name/frp         flags=display="FRP";backup
 /bootloader      emmc      /dev/block/platform/bootdevice/by-name/lk          flags=display="LK";backup;flashimg
