@@ -26,4 +26,4 @@
 /proinfo         emmc      /dev/block/platform/bootdevice/by-name/proinfo     flags=backup
 
 # Removable storage
-/external_sd     vfat      /dev/block/mmcblk1p1	/dev/block/mmcblk1	     flags=display="MicroSD";storage;removable;backup=0
+/external_sd     auto      /dev/block/mmcblk1p1	/dev/block/mmcblk1	     flags=display="MicroSD Card";storage;removable;backup=0
