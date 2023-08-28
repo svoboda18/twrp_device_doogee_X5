@@ -4,36 +4,6 @@
 -->
 <manifest version="1.0" type="framework">
     <hal format="hidl">
-        <name>android.frameworks.displayservice</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IDisplayService</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IDisplayService/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.frameworks.schedulerservice</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISchedulingPolicyService</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISchedulingPolicyService/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.frameworks.sensorservice</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISensorManager</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISensorManager/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hidl.manager</name>
         <transport>hwbinder</transport>
         <version>1.2</version>
@@ -64,16 +34,6 @@
         <fqname>@1.0::ITokenManager/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.system.net.netd</name>
-        <transport>hwbinder</transport>
-        <version>1.1</version>
-        <interface>
-            <name>INetd</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.1::INetd/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.system.wifi.keystore</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -83,16 +43,7 @@
         </interface>
         <fqname>@1.0::IKeystore/default</fqname>
     </hal>
-    <hal format="native">
-        <name>netutils-wrapper</name>
-        <transport></transport>
-        <version>1.0</version>
-    </hal>
     <vendor-ndk>
         <version>29</version>
     </vendor-ndk>
-    <system-sdk>
-        <version>28</version>
-        <version>29</version>
-    </system-sdk>
 </manifest>
